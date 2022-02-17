@@ -1,5 +1,3 @@
-// Money Expenses
-
 document.getElementById('calculate-btn').addEventListener('click', function(){
 
     // Income
@@ -8,7 +6,7 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
     const incomeAmount = parseInt(incomeText);
     console.log(incomeAmount);
 
-    // Food Expenses 
+   // Food Expenses 
     const food = document.getElementById('food-expense');
     const foodText = food.value;
     const foodExpenses = parseFloat(foodText);
@@ -38,7 +36,8 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
     const totalBalance = incomeAmount - allExpense
     totalBalanceInput.innerText = totalBalance;
      console.log(totalBalanceInput);
-   });
+
+    });
 
 
 
@@ -47,7 +46,7 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
 // Income Save Discount Percentage
    document.getElementById('save-btn').addEventListener('click', function(){
 
-      // Get Percentage 
+    // Get Percentage 
 
       const incomeInput = document.getElementById('my-income');
       const incomeText = incomeInput.value;
@@ -78,7 +77,5 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
       const remainingCalculation = totalBalanceAmount - totalSave;
       remainingbalanceInput.innerText = remainingCalculation;
       console.log(remainingCalculation);
-
-   });
-
+    });
 
