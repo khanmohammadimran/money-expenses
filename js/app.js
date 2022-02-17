@@ -1,3 +1,5 @@
+// Money Expenses
+
 document.getElementById('calculate-btn').addEventListener('click', function(){
 
     // Income
@@ -37,3 +39,46 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
     totalBalanceInput.innerText = totalBalance;
      console.log(totalBalanceInput);
    });
+
+
+
+
+
+// Income Save Discount Percentage
+   document.getElementById('save-btn').addEventListener('click', function(){
+
+      // Get Percentage 
+
+      const incomeInput = document.getElementById('my-income');
+      const incomeText = incomeInput.value;
+      const incomeAmount = parseFloat(incomeText);
+
+      const percentageInput = document.getElementById('discount-percentage');
+      const percentageText = percentageInput.value;
+      const parcentageAmount = parseFloat(percentageText);
+
+      const saveInput = document.getElementById('save-amount');
+      const saveText = saveInput.innerText;
+      const totalSaveAmount = parseFloat(saveText);
+      const totalSave = incomeAmount * (parcentageAmount / 100);
+      saveInput.innerText = totalSave;
+      console.log(saveInput);
+
+
+   // Remaining Balance
+
+      const totalBalanceInput = document.getElementById('total-balance');
+      const totalBalanceText = totalBalanceInput.innerText;
+      const totalBalanceAmount = parseFloat(totalBalanceText);
+
+
+      const remainingbalanceInput = document.getElementById('remaining-balance');
+      const remainingbalanceText = remainingbalanceInput.innerText;
+      const remainingAmount = parseInt(remainingbalanceText);
+      const remainingCalculation = totalBalanceAmount - totalSave;
+      remainingbalanceInput.innerText = remainingCalculation;
+      console.log(remainingCalculation);
+
+   });
+
+
